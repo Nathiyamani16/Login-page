@@ -1,0 +1,103 @@
+.form{
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 400px;
+  height: auto;
+  background-color: aqua;
+  border-radius: 20px;
+  box-shadow: 0px 30px 60px rgb(0,0,0);
+}
+.form h1{
+  text-align: center;
+  padding: 0 0 20px 0;
+  text-decoration: underline;
+  color: white;
+}
+.form form{
+  padding: 0 40px;
+}
+form .text
+{
+  position: relative;
+  border-bottom: 2px solid rgb(20, 145, 187);
+  margin:30px 0px;
+}
+.text input{
+  width: 100%;
+  padding: 0 5px;
+  height: 40px;
+  font-size: 18px;
+  border: none;
+  background: none;
+  outline: none;
+  color:white;
+}
+.text textarea{
+  width: 100%;
+  padding: 0 5px;
+  height: 100px; 
+  font-size: 18px;
+  border: none;
+  background: none;
+  color:white;
+  resize: none;
+  outline: none;
+}
+.text label{
+  position: absolute;
+  top:50%;
+  left: 5px;
+  color:rgb(19, 18, 17);
+  transform: translateY(-50%);
+  font-size: 18px;
+  pointer-events: none;
+  transition: all .5s;
+}
+.text span::before{
+  content: " ";
+  position: absolute;
+  width: 0%;
+  top: 40px;
+  left: 0;
+  height: 2px;
+  background-color: aquamarine;
+  transition: all .5s;
+}
+.text .text::before{
+  top:104px;
+}
+.text input:focus ~ label ,.text input:valid ~ label {
+  top:-5px;
+}
+.text input:focus ~ span::before , .text input:valid ~ span::before{
+  width: 100px;
+}
+.text textarea:focus ~ .text_label, .text
+textarea:valid ~ .text_label{
+  top: -16px;
+
+}
+.text textarea:focus~ .text_span::before , .text textarea:valid ~ .text_span::before{
+  width: 100%;
+}
+.button{
+  text-align: center;
+  margin-bottom: 20px;
+}
+.button button[type=submit]{
+
+padding: 8px;
+width: 80px;
+color: white;
+background-color: rgb(40,27,223);
+outline: none;
+border:none;
+transition: all 0.5s;
+font-weight: bolder;
+}
+.button button[type=submit]:hover{
+  background-color: dodgerblue;
+  cursor: pointer;
+}
